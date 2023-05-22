@@ -1,0 +1,27 @@
+<block wx:for="{{list}}" wx:key="index">
+
+<!-- 包裹图片+两行文字 id="{{index}}"是给按下了那个item记录-->
+
+<view class="view_tupian_wenzi" bindtap="click" id="{{index}}">
+
+  <image class="image_1" src="/images/icon-wifi-selected.png" />
+  
+  <!-- 包裹两行文字 -->
+  <view class="view_wenzi2">
+  
+    <text>店铺名称：{{item.storeName}}</text>
+    <text class="text_small">WIFI名称：{{item.wifiSsid}}</text>
+    <!-- 分割线 -->
+    <view class="container">
+      <view class="divLine"></view>
+    </view>
+    <view class='btn-container'>
+      <view class='operBtn' data-code="{{item.qrCode}}" bindtap='viewPost'>查看海报</view>
+
+    <view class='operBtnDelete' data-id="{{item.id}}" bindtap='deleteWifi' >删除</view>
+    </view>
+  </view>
+  
+</view>
+
+</block>

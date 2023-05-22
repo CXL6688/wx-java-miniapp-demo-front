@@ -1,0 +1,37 @@
+<view style='padding-top:200rpx;'>
+  <input class='input-name' placeholder='SSID' bindinput='inputChange' data-type='ssid' disabled='true' value='{{wifiSsid}}'></input>
+  <input class='input-psw' placeholder='BSSID' bindinput='inputChange' data-type='bssid' disabled='true' value='{{wifiBssid}}'></input>
+  <input class='input-psw' placeholder='密码' bindinput='inputChange' data-type='password'></input>
+  <view class='btn-container-2'>
+    <view class='creatQRcode' bindtap='creatQRcode'>获取二维码</view>
+    <button class='share' open-type='share'>分享wifi</button>
+  </view>
+  <block wx:if="{{wifiQRcode}}">
+    <view class='wifiQRcode-container'>
+      <image class='wifiQRcode' src='{{wifiQRcode}}' bindlongtap='saveImage'></image>
+      <view class='save-tap'>长按保存相册</view>
+    </view>
+  </block>
+</view>
+<block wx:if="{{wifiList}}">
+  <view class='save-tap' style='margin-top:50rpx;'>长按对应WiFi自动填写BSSID和SSID</view>
+  <view class='wifi-list'>
+    <block wx:for="{{wifiList}}">
+      <view class='wifi-list-item' bindlongtap='copyBssid' data-ssid='{{item.SSID}}' data-bssid='{{item.BSSID}}'>
+        <view class='image'>
+          <image src='/images/icon-wifi-selected.png'></image>
+        </view>
+        <view class='wifi-list-item-info'>
+          <view class='wifi-list-item-title'>{{item.SSID}}</view>
+          <view class='wifi-list-item-bssid'>{{item.BSSID}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</block>
+<block wx:else>
+  <view class='get-bssid'>
+    <image bindtap='startWifi' src='/images/icon-wifi-selected.png'></image>
+    <view class='save-tap'>查看附近WIFI</view>
+  </view>
+</block>

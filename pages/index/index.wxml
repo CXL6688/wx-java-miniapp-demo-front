@@ -1,0 +1,20 @@
+<block wx:if="{{wifiList}}">
+  <view class='wifi-list'>
+    <block wx:for="{{wifiList}}">
+      <view class='wifi-list-item' bindtap='connectWifi'>
+        <view class='image'>
+          <image src='/images/icon-wifi-selected.png'></image>
+        </view>
+        <view class='wifi-list-item-info'>
+          <view class='wifi-list-item-title'>{{item.SSID}}</view>
+          <view class='wifi-list-item-bssid'>{{item.BSSID}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</block>
+<block wx:else>
+  <view class='full-container' style='width:{{windowWidth}}px;height:{{windowHeight}}px'>
+    <image class='startWifi' src='/images/icon-wifi-selected.png' bindtap='startWifi'></image>
+  </view>
+</block>

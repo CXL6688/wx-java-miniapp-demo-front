@@ -1,0 +1,114 @@
+@import './fonts/iconfont.wxss';
+/* 满屏容器 */
+.full-container{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-container-2{
+  display: flex;
+  width: 720rpx;
+  margin: 0 auto;
+  flex-direction: row;
+  justify-content: space-between
+}
+/* pages/inputWifi/input.wxss */
+
+input {
+  border-bottom: 1rpx solid #666;
+  line-height: 72rpx;
+  font-size: 36rpx;
+  text-align: center;
+  width: 520rpx;
+  margin: 15rpx auto;
+  color: #333;
+}
+
+.creatQRcode {
+  width: 300rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 36rpx;
+  color: #fff;
+  background-color: #1296db;
+  margin: 20rpx auto;
+  text-align: center;
+  border-radius: 8rpx;
+}
+
+.share {
+  width: 300rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 36rpx;
+  color: #fff;
+  background-color: #1296db;
+  margin: 20rpx auto;
+  text-align: center;
+  border-radius: 8rpx;
+}
+
+.wifiQRcode-container {
+  width: 100%;
+  text-align: center;
+}
+
+.wifiQRcode-container image {
+  width: 320rpx;
+  height: 320rpx;
+}
+
+.save-tap {
+  font-size: 24rpx;
+  line-height: 30rpx;
+  color: #666;
+  text-align: center;
+}
+
+.get-bssid {
+  margin-top: 50rpx;
+  width: 100%;
+  text-align: center;
+}
+
+.get-bssid image {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.wifi-list-item {
+  width: 720rpx;
+  margin: 10rpx auto;
+  box-sizing: border-box;
+  padding: 15rpx 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.wifi-list-item .image {
+  padding: 23rpx 0;
+  width: 36rpx;
+}
+
+.wifi-list-item image {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.wifi-list-item .wifi-list-item-info {
+  width: 650rpx;
+}
+
+.wifi-list-item .wifi-list-item-title {
+  line-height: 46rpx;
+  height: 46rpx;
+  font-size: 36rpx;
+}
+
+.wifi-list-item .wifi-list-item-bssid {
+  height: 36rpx;
+  line-height: 36rpx;
+  font-size: 32rpx;
+}

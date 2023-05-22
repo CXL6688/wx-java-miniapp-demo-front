@@ -1,0 +1,5 @@
+<view class="box">
+    <painter customStyle='position: absolute; left: -9999rpx;' palette="{{template}}" bind:imgOK="canvasSuc" />
+    <image mode="widthFix" show-menu-by-longpress="true" src="{{image}}" bindtap="previewImg" />
+    <view class="save creatQRcode" hover-class="hoverClick" bindtap="getSave">保存图片</view>
+</view>

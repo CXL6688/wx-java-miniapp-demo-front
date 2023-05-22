@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/create/create",
+    "pages/mine/mine",
+    "pages/canvas/canvas",
+    "pages/connect/connect",
+    "pages/inputWifi/input",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "扫码连wifi",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation":{
+      "desc": "您的位置信息将用于小程序位置接口的展示效果"
+    } 
+  },
+  "tabBar": {
+    "list": [
+      {
+      "pagePath": "pages/create/create",
+      "text": "新建WIFI",
+      "iconPath": "/images/icon-add.png",
+      "selectedIconPath": "/images/icon-add-selected.png"
+    },{
+      "pagePath": "pages/mine/mine",
+      "text": "我的WIFI",
+      "iconPath": "/images/icon-mine.png",
+      "selectedIconPath": "/images/icon-mine-selected.png"
+    }]
+  }
+}

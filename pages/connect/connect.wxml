@@ -1,0 +1,23 @@
+<view class='full-container' style='width:{{windowWidth}}px;height:{{windowHeight}}px'>
+
+  <block wx:if="{{connect==1}}">
+    <view class='wifiQRcode-container'>
+      <image class='' src='/images/connect-icon-loading.png' bindtap='startWifi'></image>
+      <view class='save-tap'>正在连接</view>
+    </view>
+  </block>
+
+  <block wx:if="{{connect==2}}">
+    <view class='wifiQRcode-container'>
+      <image class='' src='/images/icon-wifi-selected.png' bindtap='startWifi'></image>
+      <view class='save-tap'>连接成功</view>
+    </view>
+  </block>
+
+  <block wx:if="{{connect==3}}">
+    <view class='wifiQRcode-container'>
+      <image class='' src='/images/icon-wifi-selected.png'></image>
+      <view class='save-tap'>连接失败</view>
+    </view>
+  </block>
+</view>

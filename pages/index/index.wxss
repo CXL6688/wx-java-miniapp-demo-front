@@ -1,0 +1,40 @@
+.startWifi {
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.wifi-list-item {
+  width: 720rpx;
+  margin: 10rpx auto;
+  box-sizing: border-box;
+  padding: 15rpx 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.wifi-list-item .image {
+  padding: 23rpx 0;
+  width: 36rpx;
+}
+
+.wifi-list-item image {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.wifi-list-item .wifi-list-item-info {
+  width: 650rpx;
+}
+
+.wifi-list-item .wifi-list-item-title {
+  line-height: 46rpx;
+  height: 46rpx;
+  font-size: 36rpx;
+}
+
+.wifi-list-item .wifi-list-item-bssid {
+  height: 36rpx;
+  line-height: 36rpx;
+  font-size: 32rpx;
+}

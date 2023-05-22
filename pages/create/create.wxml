@@ -1,0 +1,38 @@
+<view style='padding-top:200rpx;'>
+  <input class='input-name' placeholder='店铺名称' bindinput='inputChange' data-type='storeName' value='{{storeName}}'></input>
+  <input class='input-name' placeholder='wifi名称' bindinput='inputChange' data-type='ssid' value='{{wifiSsid}}'></input>
+  <input class='input-psw' placeholder='wifi密码' bindinput='inputChange' data-type='password' value='{{wifiPassword}}'></input>
+  <input  class='input-name' placeholder='推广地址（选填）' bindinput='inputChange' data-type='storeUrl' value='{{storeUrl}}'></input>
+  <view class='btn-container-2'>
+    <view class='creatQRcode' bindtap='resetform'>重置</view>
+    <view class='creatQRcode' bindtap='submitStoreWifiInfo'>提交</view>
+  </view>
+  <block wx:if="{{wifiQRcode}}">
+    <view class='wifiQRcode-container'>
+      <image class='wifiQRcode' src='{{wifiQRcode}}' bindlongtap='saveImage'></image>
+      <view class='save-tap'>长按保存相册</view>
+    </view>
+  </block>
+</view>
+<block wx:if="{{wifiList}}">
+  <view class='save-tap' style='margin-top:50rpx;'>长按选择对应WiFi</view>
+  <view class='wifi-list'>
+    <block wx:for="{{wifiList}}">
+      <view class='wifi-list-item' bindlongtap='copyBssid' data-ssid='{{item.SSID}}' data-bssid='{{item.BSSID}}'>
+        <view class='image'>
+          <image src='/images/icon-wifi-selected.png'></image>
+        </view>
+        <view class='wifi-list-item-info'>
+          <view class='wifi-list-item-title'>{{item.SSID}}</view>
+          <view class='wifi-list-item-bssid'>{{item.BSSID}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</block>
+<block wx:else>
+  <view class='get-bssid'>
+    <image bindtap='startWifi' src='/images/icon-wifi-selected.png'></image>
+    <view class='save-tap'>点击图标查看附近WIFI</view>
+  </view>
+</block>
